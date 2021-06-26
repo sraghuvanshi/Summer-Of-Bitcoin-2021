@@ -18,7 +18,7 @@ This is my submission for the summer of bitcoin challenge 2021, built using Node
 
 **Keynote 3**: If there are two transactions having the same `fee/weight` ratio, we can then sort them on the basis of the number of their required parent transactions.
 
-## The Solution
+## Evaluating the solution
 
 These instructions will get you a copy of the project up and running on your local machine for testing, evaluation and contribution purposes.
 
