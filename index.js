@@ -64,22 +64,22 @@ csv.parseFile('./data/mempool.csv', {skipLines: 1, headers: false})
             writeStream.write(`${row[1]}\n`);
         });
         console.log(chalk.bgGreen.black('\nSUCCESS') + 
-        chalk.italic.white(" Block created and stored successfully in ") + 
-        chalk.underline.italic('result') + 
-        chalk.italic.white(" folder"));
+        chalk.italic(" Block created and stored successfully in ") + 
+        chalk.underline.italic.bold('result') + 
+        chalk.italic(" folder"));
 
         // Log the results
         // used chalk module for better representation
         console.log(chalk.bgCyan.black('\nResult:') + 
-        chalk.white(" In the procesed Block ") +  
+        " In the procesed Block " +  
         chalk.dim("(./result/block.txt)") +
-        chalk.white("\n\t\tTotal number of transactions processed: ") + 
+        "\n\t\tTotal number of transactions processed: " + 
         chalk.green(`${processedEntries.toLocaleString()}`) +
-        chalk.white("\n\t\tTotal weight processed: ") +
+        "\n\t\tTotal weight processed: " +
         chalk.green(`${currentWeight.toLocaleString()}`) +
-        chalk.white("\n\t\tTotal fees collected by the miner: ") +
+        "\n\t\tTotal fees collected by the miner: " +
         chalk.green(`${totalFees.toLocaleString()}`) +
-        chalk.white(" (satoshis)\n"));
+        " (satoshis)\n");
 
         writeStream.end();
     });
